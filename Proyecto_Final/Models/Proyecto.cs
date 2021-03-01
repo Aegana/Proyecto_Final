@@ -20,5 +20,8 @@ namespace Proyecto_Final.Models
         public string URL_IMAGEN { get; set; }
 
 
+
+
+
     }
 }
