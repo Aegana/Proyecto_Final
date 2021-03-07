@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -44,6 +45,7 @@ namespace Proyecto_Final.Views.Proyectos
         }
 
         // GET: Proyectos/Create
+        [Authorize]
         public IActionResult Create()
         {
             return View();
@@ -66,6 +68,7 @@ namespace Proyecto_Final.Views.Proyectos
         }
 
         // GET: Proyectos/Edit/5
+        [AUTHORIZE]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -117,6 +120,7 @@ namespace Proyecto_Final.Views.Proyectos
         }
 
         // GET: Proyectos/Delete/5
+        [AUTHORIZE]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
